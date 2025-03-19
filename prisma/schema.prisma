@@ -1,0 +1,33 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Aluno {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  matricula String   @unique
+  turma     String
+  boletim   Boletim?
+}
+
+model Professor {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  disciplina String
+}
+
+model Boletim {
+  id        Int      @id @default(autoincrement())
+  alunoId   Int      @unique 
+  aluno     Aluno    @relation(fields: [alunoId], references: [id])
+  disciplina1 Float
+  disciplina2 Float
+  disciplina3 Float
+  disciplina4 Float
+  disciplina5 Float
+}

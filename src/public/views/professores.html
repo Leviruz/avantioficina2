@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de Professores</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Gerenciamento de Professores</h1>
+      <nav>
+        <ul>
+          <li><a href="/views/index.html">Voltar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Lista de Professores</h2>
+      <ul id="professores-list"></ul>
+
+      <h2>Adicionar Professor</h2>
+      <form id="professor-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="disciplina">Disciplina:</label>
+        <input type="text" id="disciplina" name="disciplina" required />
+
+        <button type="submit">Adicionar Professor</button>
+      </form>
+    </main>
+    <script src="js/professores.js"></script>
+  </body>
+</html>

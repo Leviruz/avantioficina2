@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de Alunos</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Gerenciamento de Alunos</h1>
+      <nav>
+        <ul>
+          <li><a href="/views/index.html">Voltar</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Lista de Alunos</h2>
+      <ul id="alunos-list"></ul>
+
+      <h2>Adicionar Aluno</h2>
+      <form id="aluno-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="matricula">Matrícula:</label>
+        <input type="text" id="matricula" name="matricula" required />
+
+        <label for="turma">Turma:</label>
+        <input type="text" id="turma" name="turma" required />
+
+        <button type="submit">Adicionar Aluno</button>
+      </form>
+    </main>
+    <script src="js/alunos.js"></script>
+  </body>
+</html>
